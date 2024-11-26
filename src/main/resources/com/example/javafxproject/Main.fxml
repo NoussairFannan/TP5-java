@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="763.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxproject.Controllers.GestionProfDepConotroller">
+   <tabs>
+      <Tab text="Professeur">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="427.0" prefWidth="777.0">
+               <children>
+                  <SplitPane layoutX="1.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="413.0" prefWidth="763.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="405.0" prefWidth="848.0">
+                           <children>
+                              <TextField fx:id="textSearch" layoutX="7.0" layoutY="17.0" prefHeight="26.0" prefWidth="430.0" promptText="Recherche" />
+                              <TableView fx:id="tableShowProf" layoutX="7.0" layoutY="55.0" prefHeight="353.0" prefWidth="747.0">
+                                 <columns>
+                                    <TableColumn fx:id="idProfShow" prefWidth="25.599974632263184" text="Id" />
+                                    <TableColumn fx:id="nomProfShow" prefWidth="67.99999618530273" text="Nom" />
+                                    <TableColumn fx:id="prenomProfShow" prefWidth="80.79996490478516" text="Prenom" />
+                                    <TableColumn fx:id="cinProfShow" prefWidth="86.40003967285156" text="CIN" />
+                                    <TableColumn fx:id="teleProfShow" prefWidth="128.79998779296875" text="Telephone" />
+                                    <TableColumn fx:id="emailProfShow" prefWidth="143.19998168945312" text="Email" />
+                                    <TableColumn fx:id="dateProfShow" minWidth="0.0" prefWidth="124.7999267578125" text="Date de Recrutement" />
+                                    <TableColumn fx:id="depProfShow" prefWidth="84.800048828125" text="Departement" />
+                                 </columns>
+                              </TableView>
+                              <HBox layoutX="461.0" layoutY="17.0" prefHeight="26.0" prefWidth="286.0" spacing="5.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#rechercherProf" text="Rechercher" />
+                                    <Button mnemonicParsing="false" onAction="#ajouterProf" text="Ajouter" />
+                                    <Button mnemonicParsing="false" onAction="#supprimerProf" text="Supprimer" />
+                                    <Button mnemonicParsing="false" onAction="#modifierProf" text="Modifier" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Departement">
+         <content>
+            <SplitPane orientation="VERTICAL" prefHeight="374.0" prefWidth="600.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="11.0" prefWidth="598.0">
+                     <children>
+                        <TableView fx:id="tableShowDep" layoutX="14.0" layoutY="43.0" prefHeight="346.0" prefWidth="726.0">
+                           <columns>
+                              <TableColumn fx:id="idDepShow" prefWidth="99.99996757507324" text="Id" />
+                              <TableColumn fx:id="nomDepShow" prefWidth="99.99996757507324" text="Nom" />
+                           </columns>
+                        </TableView>
+                        <HBox layoutX="14.0" layoutY="8.0" prefHeight="35.0" prefWidth="763.0" spacing="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#ajouterDep" prefHeight="26.0" prefWidth="78.0" text="Ajouter" />
+                              <Button mnemonicParsing="false" onAction="#supprimerDep" prefHeight="26.0" prefWidth="87.0" text="Supprimer" />
+                              <Button mnemonicParsing="false" onAction="#profDep" text="Afficher liste Professeur">
+                                 <HBox.margin>
+                                    <Insets left="400.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
