@@ -6,11 +6,15 @@ Ce projet JavaFX est une application permettant la gestion des professeurs et de
 
 ## Diagrammes
 ### 1. **Diagramme de Classe**
+![DiagrammeDeClasse](https://github.com/user-attachments/assets/ec20f023-0ae1-4ddc-ad85-0185b7bb094b)
 
 ---
 ### 2. **MLD**
+![MLD](https://github.com/user-attachments/assets/0b0e2ecc-21d7-46ae-860c-619fbbad1008)
+
 ---
 ## Structure du Projet
+
 
 ### 1. **Package `Modules`**
 Contient les classes représentant les entités principales du système.
